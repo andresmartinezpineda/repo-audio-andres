@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="CSS/estilos.css">
     <title>Andres</title>
+    <script src="index.js"></script>
 </head>
 <body>
     <header>
@@ -109,10 +110,15 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia, deleniti deserunt
             tenetur vel dignissimos illum architecto nobis eaque nihil ipsum nostrum ut sunt illo quia,
             vero sapiente possimus quidem!</p>
-            <form action="">
-                <input type="email" placeholder="ingresa tu email">
+            <form action="" id="form">
+                <input type="email" id="email-form" placeholder="ingresa tu email">
                 <input type="submit" value="suscribete">
             </form>
+
+            <label>
+                <input type="checkbox" id="activador" required>
+                terminos y condiciones
+            </label>
     </div>
 
     <section class="opiniones" id="opiniones">
@@ -182,6 +188,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <section class="precios" id="precios">
@@ -196,31 +203,43 @@
                     <li><i class="fa-solid fa-xmark"></i> extra bass</li>
                     <li><i class="fa-solid fa-xmark"></i> cancelacion de ruido</li>
                 </ul>
-                <a href="#" class="btn">compra ya!!!</a>
+                <p id="comprado" style="display: none;">has añadido este objeto al carrito de compras</p>
+                <button id="btn" class="btn" onclick="añadir_carrito('comprado')" >compra ya!!!</button>
             </div>
 
             <div class="caja">
                 <h3 class="titulo">diadema</h3>
+                
                 <div class="tipos">$70 <span>/con factura</span></div>
+                
                 <ul>
                     <li><i class="fa-solid fa-check"></i> manos libres</li>
                     <li><i class="fa-solid fa-check"></i> resistentes al agua</li>
                     <li><i class="fa-solid fa-check"></i> extra bass</li>
                     <li><i class="fa-solid fa-xmark"></i> cancelacion de ruido</li>
                 </ul>
-                <a href="#" class="btn">compra ya!!!</a>
+
+                <p id="comprado1" style="display: none;">has añadido este objeto al carrito de compras</p>
+
+                <button id="btn" class="btn" onclick="añadir_carrito('comprado1')" >compra ya!!!</button>
             </div>
 
             <div class="caja">
                 <h3 class="titulo">inalambricos</h3>
+
                 <div class="tipos">$70 <span>/con factura</span></div>
+                
                 <ul>
                     <li><i class="fa-solid fa-check"></i> manos libres</li>
                     <li><i class="fa-solid fa-check"></i> resistentes al agua</li>
                     <li><i class="fa-solid fa-check"></i> extra bass</li>
                     <li><i class="fa-solid fa-check"></i> cancelacion de ruido</li>
                 </ul>
-                <a href="#" class="btn">compra ya!!!</a>
+
+                <p id="comprado2" style="display: none;">has añadido este objeto al carrito de compras</p>
+
+                <button id="btn" class="btn" onclick="añadir_carrito('comprado2')" >compra ya!!!</button>
+                
             </div>
         </div>
     </section>
@@ -300,6 +319,8 @@
             &copy, copyrigth @2021 Andres Martinez youtube
         </h1>
     </div>
+
+    <script src="script/app.js"></script>
 
 </body>
 </html>
